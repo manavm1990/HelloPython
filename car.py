@@ -33,7 +33,9 @@ class Car:
 
     def brake(self) -> float:
         """Reduces the speed of the car by 5 km/h (or to 0)."""
-        self._speed = max(0.0, self._speed - 5)  # `max` expects both arguments to be of same type.
+        self._speed = max(
+            0.0, self._speed - 5
+        )  # `max` expects both arguments to be of same type.
         return self._speed
 
     def step(self) -> (float, int):
