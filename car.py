@@ -1,8 +1,11 @@
+from typing import Tuple
+
+
 class Car:
-    def __init__(self, speed: float = 0):
+    def __init__(self, speed: float = 0.0):
         # A single leading underscore indicates that an attribute or method is intended to be private or protected.
         self._speed = speed
-        self._odometer = 0
+        self._odometer = 0.0
         self._time = 0
 
     @property
@@ -38,7 +41,7 @@ class Car:
         )  # `max` expects both arguments to be of same type.
         return self._speed
 
-    def step(self) -> (float, int):
+    def step(self) -> Tuple[float, int]:
         """Advances the car by one second."""
         self._odometer += self._speed
         self._time += 1
